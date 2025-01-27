@@ -1,0 +1,86 @@
+<section id="home" class="section">
+    <div class="section-content">
+      <h4 style="color: #317aa5;">Hola, soy</h4>
+      <h1 style="color: #409ed4;">Daniel Sánchez García</h1>
+      <h2 style="color: #407b9e;">Bienvenido a mi Portfolio</h2>
+  
+      <div class="social-buttons">
+        <button class="icon-button" (click)="openLinkedIn()">
+          <img src="assets/images/linkedin.png" alt="LinkedIn">
+        </button>
+        <button class="icon-button" (click)="openGitHub()">
+          <img src="assets/images/github.png" alt="GitHub">
+        </button>
+      </div>
+    </div>
+</section>
+<section id="about">
+    <div class="about-header">
+      <h2>Un poco sobre mí</h2>
+      <p>Me llamo Daniel Sánchez García, soy un programador web orientado al frontend al que le encanta innovar y mejorar cada día. Considero que el diseño es algo fantástico y que cada trabajo te ayuda a mejorar tus habilidades de cara al futuro.</p>
+    </div>
+    <div class="skills-container">
+      <h2 class="skills-title">Skills</h2>
+      <div class="skills-cards">
+        <div class="skill-card">
+          <h3>Diseño 3D</h3>
+          <ul>
+            <li>Maya</li>
+            <li>Blender</li>
+            <li>Unity</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Diseño</h3>
+          <ul>
+            <li>Photoshop</li>
+            <li>Substance Painter</li>
+            <li>Figma</li>
+            <li>Krita</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Desarrollo</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>React</li>
+            <li>Angular</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
+  
+<section id="projects">
+    <h1>Proyectos</h1>
+    <p>Aquí encontraras algunos proyectos que he realizado.</p>
+</section>
+  
+<section id="contact">
+    <div class="wrapper">
+      <form action="correo.php" method="POST">
+        <h2>Contacto</h2>
+        <div class="input-field">
+          <input type="text" id="name" name="name" required>
+          <label for="name">Nombre</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="email" name="email" required>
+          <label for="email">Correo electrónico</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="subject" name="subject" required>
+          <label for="subject">Asunto</label>
+        </div>
+        <div class="input-field">
+          <textarea id="message" name="message" required></textarea>
+          <label for="message">Mensaje</label>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+</section>

@@ -1,0 +1,254 @@
+:root {
+    --background-color: white;
+    --text-color: rgb(0, 0, 0);
+    --navbar-bg: #d1d9e2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family:monospace;
+}
+
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: #d5d6d6;
+    padding: 50px 20px;
+}
+
+.about-header {
+    max-width: 600px;
+    text-align: center;
+}
+
+.about-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-header p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.skills-container {
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.skills-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-card {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.skill-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-card ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#projects {
+    background-color: #dee2e6;
+}
+
+#contact {
+    background-color: #c2c9d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.wrapper {
+    width: 500px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    background-color: #9ea7b1;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.input-field {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+    margin: 20px 0;
+}
+
+.input-field label {
+    position: absolute;
+    color: #000000;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+.input-field input:focus ~ label,
+.input-field textarea:focus ~ label,
+.input-field input:valid ~ label,
+.input-field textarea:valid ~ label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+}
+
+button {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-buttons {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon-button {
+    all: unset;  
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon-button img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icon-button img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h4 {
+    opacity: 1; /* Siempre visible */
+    text-align: center; /* Centrado */
+}
+
+h1 {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateX(-50px); /* Aparece desde la izquierda */
+    animation: slideFromLeft 1s ease-out forwards;
+    animation-delay: 0.5s; /* Retardo opcional */
+}
+
+h2 {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(50px); /* Aparece desde abajo */
+    animation: slideFromBottom 1s ease-out forwards;
+    animation-delay: 1s; /* Retardo opcional */
+}
